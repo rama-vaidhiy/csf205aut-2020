@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>CSS Demo</title>
+      <!--<link rel="stylesheet" href="demostyle.css">-->
+      <style>
+        
+         .headings {
+         color:green;
+         }
+         h1, h2, h3{
+         color: red;
+         }
+         h1{
+         color:blue;
+         }
+         body {
+         font-style: italic;
+         }
+         li { margin-left: 0 } /* This is a reset */
+         @media screen {
+         li { margin-left: 50px }
+         }
+         @media print {
+         li { margin-left: 1px }
+         }
+         .specific { margin-left: 1em } /* user css*/
+         body {
+         color: green;
+         }
+         .my-class-1 a {
+         color: inherit;
+         }
+         .my-class-2 a {
+         color: initial;
+         }
+         .my-class-3 a {
+         color: unset;
+         }
+         ::first-letter {
+         font-size: 18px; background-color: orange;
+          }
+          p::first-letter {
+          font-size: 12px; background-color: black;
+           }
+           a:link {
+             background: blue; color: white;
+           }
+           a:visited {
+             background: white;
+             color: black;
+           }
+      </style>
+   </head>
+   <body>
+      <h1>This is h1 header.</h1>
+      <h2>This is h2 header.</h2>
+      <h3 class="headings">This is h3 header. </h3>
+      <h4>This is h4 header. </h4>
+      <p> This is using the external stylesheet</p>
+      <p style="color:green;">This is using the inline stylesheet</p>
+      <ul>
+         <li class="specific">1<sup>st</sup></li>
+         <li>2<sup>nd</sup></li>
+      </ul>
+      <ul>
+         <li>Default <a href="#">link</a> color</li>
+         <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+         <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+         <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+      </ul>
+      <a href="https://www.google.com" target="_blank">Google</a> <br/>
+      <a href="https://swansea.ac.uk" target="_blank">Swansea University</a> <br/>
+      <a href="https://www.w3.org"  target="_blank">W3C</a> <br/>
+      <a href="https://www.w3schools.com"  target="_blank">W3Schools</a>
+      <span>&#x24;</span>
+      <span>&#36;</span>
+      <span>&dollar;</span>
+
+   </body>
+</html>
