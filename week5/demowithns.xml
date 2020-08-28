@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<demo xmlns:dns="http://wwww.demons.com">
+  <dns:chardata name="Tamil Alphabet">
+    <![CDATA[&#2949;]]>
+  </dns:chardata>
+  <dns:chardata name="Tamil Alphabet">
+    &#2949;
+  </dns:chardata>
+</demo>
