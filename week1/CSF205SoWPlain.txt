@@ -1,0 +1,64 @@
+CSF205-Scheme of Work
+=====================
+
+Course Title             Course Duration  Instructor              Course Dates
+--------------------------------------------------------------------------------
+Data Representation,     3 Months         Ramalakshmi             23-Sept-2020
+Markup Languages                          Vaidhiyanathan          to 16-Dec-2020
+and Web Services                          (r.vaidhiyanathan@swansea.ac.uk)
+
+Recommended Books
+-----------------
+An introduction to XML and Web technologies by Anders Møller and
+    Michael I. Schwartzbach
+Beginning XML by David Hunter
+
+Lecture Syllabus
+----------------
+Week    Topic                        Other Details                Labs
+--------------------------------------------------------------------------------
+1       Introduction to              -                            HTML
+        Data Representation,
+        Data Presentation,
+        Markup Languages, HTML
+
+2       Presentation and             -                            HTML + CSS
+        Styling of Data using CSS,
+        and Web Accessibility
+
+3       Introduction to Data         Coursework 1 Handed out      XML
+        Representation using XML,
+        XML validation using DTD
+        and Schema
+
+4       XPath, XSLT,                 -                            XSLT
+        XML to HTML using XSLT
+
+5       Java XML Programming,        Coursework 1 Due             Java XML
+        SAX, DOM and StaX Parsers                                 Parsers
+
+6       Java XML Programming         MidTerm for CSF205           Java XML
+        (Only 1 lecture)                                          Parsers
+
+7       Introduction to HTTP &       -                            Simple
+        Servlets (only 1 lecture)                                 Servlets
+
+8       Java Servlet Programming     -                            Servlets
+        and Web Application
+        development cycle
+
+9       Web Application Security     Coursework 2 Handed out      Web Services
+        and Web Services                                          (SOAP, UDDI,
+        (SOAP, UDDI, WSDL)                                        WSDL)
+
+10      RESTful API Architecture     -                            JSON
+        and JSON Data Representation
+
+11      More Frontend (JavaScript,   Coursework 2 Due             Catch up Lab
+        JQuery, AJAX etc.)                                        Sessions
+        and Backend Web Development
+        (Java, Python, PHP etc.), and Other
+				forms of Data Representation
+        (RDF, *SON)
+
+12      EndTerm Test for CSF205      -                            -

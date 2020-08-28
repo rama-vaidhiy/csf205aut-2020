@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>This is my title</title>
+      <meta name="Author" content="Rama" />
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   </head>
+   <body>
+      <h1>
+         Type 1 header
+      </h1>
+      <h2>
+         Type 2 header
+      </h2>
+      <h3>
+         Type 3 header
+      </h3>
+      <h4>
+         Type 4 header
+      </h4>
+      <h5>
+         Type 5 header
+      </h5>
+      <h6>
+         Type 6 header
+      </h6>
+      <h7>There ain't any more header types after 6. Even if you use,
+         the browser will ignore it and show it as a paragraph
+      </h7>
+      <p>
+         This is the start of a paragraph.
+      </p>
+      <b>Its good to be bold,</b>
+      <strong>But it is better to make it strong,</strong><br>
+      <i>Italicize me and see,</i>
+      <em>But it is better if you let me emphasize it for you,</em><br>
+      <tt>Try your hand at teletyping </tt>
+      <cite>or you can just cite me</cite><br>
+      <code>System.out.println the code</code>
+      <pre>or preformat it as you like it</pre>
+      Let us draw a line
+      <hr/>
+      and then move on. If you don't get it, then may be
+      I can draw it like this
+      <hr size="10px"/>
+      to make it thick. Or would you prefer
+      if I reduce its width
+      <hr width="120px"/>
+      ? Have I crossed a line here?
+      Let us take a short break <br/> to show more tricks.
+      <blockquote>Quote them in blocks if you want to show them apart</blockquote>
+      How about some lists? I like them ordered like this
+      <ol>
+         <li>With </li>
+         <li>every</li>
+         <li>single</li>
+         <li>item</li>
+         <li>added</li>
+         <li>to it</li>
+      </ol>
+      I can change my starting point if I want to because
+      <ol start="40">
+         <li>Life </li>
+         <li>Starts</li>
+         <li>At</li>
+         <li>40</li>
+      </ol>
+      Or perhaps, when in Rome,
+      <ol type="I">
+         <li>do</li>
+         <li>as</li>
+         <li>the</li>
+         <li>romans</li>
+         <li>do</li>
+      </ol>
+      Let's get rid of all this ordering and stick to simple points
+      <ul>
+         <li>For</li>
+         <li>no</li>
+         <li>reason</li>
+         <li>what</li>
+         <li>so</li>
+         <li>ever</li>
+      </ul>
+      There are so many it is hard to define all of them. Sometimes all we want is to
+      <dl>
+         <dt>Define each term </dt>
+         <dd>and follow it by the actual definition itself </dd>
+         <dt>Another definition here </dt>
+         <dd> which has more definition text added </dd>
+      </dl>
+      Enough of these lists, let's link stuff up.
+      <a href="https://www.w3.org" target="_blank">W3C</a> is our guru but
+      you can also <a href="mailto:r.vaidhiyanathan@swansea.ac.uk">email me </a>with your doubts.<br>
+      I can also add some vibrancy with some images in a thick border scaling it to 100x100
+      <img src="FlowerHDR.jpg" border="10" width="100" height="100" align="right" alt="Flower in HDR"/>
+      aligned to the right and don't forget to add some alternative text in case the image is not present
+      or for users who cannot see. <br>
+      I can also add an image from the web, if I chose to and anchor it
+      <a title="I, Luc Viatour / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)"
+         href="https://commons.wikimedia.org/wiki/File:Dew_on_spider_web_Luc_Viatour.jpg" target="_blank">
+      <img alt="Dew on spider web Luc Viatour" width="200" height="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Dew_on_spider_web_Luc_Viatour.jpg/512px-Dew_on_spider_web_Luc_Viatour.jpg"></a>
+      <br/>
+      Would it help if we add these details to a table with some cell padding and spacing?<br/>
+      <table border="solid" cellpadding="10px" cellspacing="20px">
+         <tr>
+            <th>Header Column 1 in the Row </th>
+            <th>Header Column 2 in the Row </th>
+         </tr>
+         <tr >
+            <td colspan="2" rowspan="2" >Data column 1 (aka cell) in the Data Row 1 spanning the space of 2 columns and 2 rows</td>
+            <td >Data column 2 (aka cell) in the Data Row 1 </td>
+         </tr>
+         <tr>
+            <td >Data column 1 (aka cell) in the Data Row 2 </td>
+            <td>Data column 2 (aka cell) in the Data Row 2 </td>
+         </tr>
+      </table>
+      <br/> We can do a lot more with tables, but let's do some form elements now to end it all.
+      <form>
+         Let's start with some choices:
+         Do you like this example? Yes <input type="radio" name="radio1" value="yes">
+         No  <input type="radio" name="radio1" value="no" checked>
+         Maybe  <input type="radio" name="radio1" value="maybe">
+         <br/>
+         What would you do with this example?
+         Use it to learn <input type="checkbox" name="option1" value="use">
+         Take it and extend it  <input type="checkbox" name="option1" value="extend" checked>
+         Bin it <input type="checkbox" name="option1" value="bin">
+         <br/>
+         Write some text using this box here <input type="text" name="txtinput">
+         <br/>
+         Or may be write your history using the text area here <textarea name="longtext" cols="10" rows="10"> </textarea>
+         <br/>
+         Want to submit using an image?<input type="image" name="imgsubmit" src="FlowerHDR.jpg" width="20" height="20" alt="submit the form">
+         <br/>
+         or submit using a button <input type="submit" value="Submit">
+      </form>
+      however you do it, it won't submit anything as we haven't done any action on it.
+      But that is for laters. For now, enjoy writing more HTML.
+   </body>
+</html>
