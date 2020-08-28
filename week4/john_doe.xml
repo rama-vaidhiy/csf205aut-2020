@@ -1,0 +1,7 @@
+<card xmlns="http://businesscard.org">
+  <name>John Doe</name>
+  <title>CEO, Widget Inc.</title>
+  <email>john.doe@widget.inc</email>
+  <phone>(202) 456-1414</phone>
+  <logo uri="widget.gif"/>
+</card>
