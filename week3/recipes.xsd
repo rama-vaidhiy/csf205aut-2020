@@ -1,0 +1,99 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+         xmlns:r="http://www.brics.dk/ixwt/recipes"
+         targetNamespace="http://www.brics.dk/ixwt/recipes"
+         elementFormDefault="qualified">
+
+  <element name="collection">
+    <complexType>
+      <sequence>
+        <element name="description" type="string"/>
+        <element ref="r:recipe" minOccurs="0" maxOccurs="unbounded"/> 
+      </sequence>
+    </complexType>
+    <unique name="recipe-id-uniqueness">
+      <selector xpath=".//r:recipe"/>
+      <field xpath="@id"/>
+    </unique>
+    <keyref name="recipe-references" refer="r:recipe-id-uniqueness">
+      <selector xpath=".//r:related"/>
+      <field xpath="@ref"/>
+    </keyref>
+  </element>
+
+  <element name="recipe">
+    <complexType>
+      <sequence>
+        <element name="title" type="string"/>
+        <element name="date" type="string"/>
+        <element ref="r:ingredient" minOccurs="0" maxOccurs="unbounded"/>
+        <element ref="r:preparation"/>
+        <element name="comment" type="string" minOccurs="0"/>
+        <element ref="r:nutrition"/>
+        <element ref="r:related" minOccurs="0" maxOccurs="unbounded"/>
+      </sequence>
+      <attribute name="id" type="NMTOKEN"/>
+    </complexType>
+  </element>
+
+  <element name="ingredient">
+    <complexType>
+      <sequence minOccurs="0">
+        <element ref="r:ingredient" minOccurs="0" maxOccurs="unbounded"/>
+        <element ref="r:preparation"/>
+      </sequence>
+      <attribute name="name" use="required"/>
+      <attribute name="amount" use="optional">
+        <simpleType>
+          <union>
+            <simpleType>
+              <restriction base="r:nonNegativeDecimal"/>
+            </simpleType>
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="*"/>
+              </restriction>
+            </simpleType>
+          </union>
+        </simpleType>
+      </attribute>
+      <attribute name="unit" use="optional"/>
+    </complexType>
+  </element>
+
+  <element name="preparation">
+    <complexType>
+      <sequence>
+        <element name="step" type="string" minOccurs="0" maxOccurs="unbounded"/>
+      </sequence>
+    </complexType>
+  </element>
+
+  <element name="nutrition">
+    <complexType>
+      <attribute name="calories" type="r:nonNegativeDecimal" use="required"/>
+      <attribute name="protein" type="r:percentage" use="required"/>
+      <attribute name="carbohydrates" type="r:percentage" use="required"/>
+      <attribute name="fat" type="r:percentage" use="required"/>
+      <attribute name="alcohol" type="r:percentage" use="optional"/>
+    </complexType>
+  </element>
+
+  <element name="related">
+    <complexType mixed="true">
+      <attribute name="ref" type="NMTOKEN" use="required"/>
+    </complexType>
+  </element>
+
+  <simpleType name="nonNegativeDecimal">
+    <restriction base="decimal">
+      <minInclusive value="0"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="percentage">
+    <restriction base="string">
+      <pattern value="([0-9]|[1-9][0-9]|100)%"/>
+    </restriction> 
+  </simpleType>
+
+</schema>

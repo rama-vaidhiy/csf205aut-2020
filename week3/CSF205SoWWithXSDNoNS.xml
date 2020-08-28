@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemeOfWork courseID="CSF205"
+              xmlns="http://www.example.org/sow"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.example.org/sow sow.xsd ">
+    <courseDetails>
+        <courseTitle>Data Representation, Markup Languages and Web Services</courseTitle>
+        <courseDuration length="months">3</courseDuration>
+        <courseInstructor>
+            <instructor emailID="r.vaidhiyanathan@swansea.ac.uk">Ramalakshmi Vaidhiyanathan</instructor>
+        </courseInstructor>
+        <courseDates>
+            <startDate>23-Sept-2020</startDate>
+            <endDate>16-Dec-2020</endDate>
+        </courseDates>
+    </courseDetails>
+    <booksRecommended>
+        <book isbn10="0321269667">
+            <title>An Introduction to XML and Web Technologies</title>
+            <authors>
+                <author>Anders Møller</author>
+                <author>Michael I. Schwartzbach</author>
+            </authors>
+        </book>
+        <book isbn10="0470114878">
+            <title>Beginning XML</title>
+            <authors>
+                <author>David Hunter</author>
+            </authors>
+        </book>
+    </booksRecommended>
+    <lectureSyllabus>
+        <week id="1" test="midterm" coursework="1">
+            <topics>Introduction to Data Representation,
+                Data Presentation, Markup Languages, HTML</topics>
+            <lab>HTML</lab>
+        </week>
+        <week id="2" test="midterm" coursework="1">
+            <topics>Presentation and Styling of Data using CSS,
+                and Web Accessibility</topics>
+            <lab>HTML + CSS</lab>
+        </week>
+        <week id="3" test="midterm" coursework="1">
+            <topics>Introduction to Data Representation using XML,
+                XML validation using DTD and Schema</topics>
+            <otherDetails>Coursework 1 Handed out</otherDetails>
+            <lab>XML</lab>
+        </week>
+        <week id="4" test="midterm">
+            <topics>XPath, XSLT, XML to HTML using XSLT</topics>
+            <lab>XSLT</lab>
+        </week>
+        <week id="5" test="midterm">
+            <topics>Java XML Programming, SAX, DOM and StaX Parsers</topics>
+            <otherDetails>Coursework 1 Due</otherDetails>
+            <lab>Java XML Parsers</lab>
+        </week>
+        <week id="6" test="endterm" coursework="2">
+            <topics>Java XML Programming (Only 1 lecture)</topics>
+            <otherDetails>Mid Term Test for CSF205</otherDetails>
+            <lab>Java XML Parsers</lab>
+        </week>
+        <week id="7" test="endterm" coursework="2">
+            <topics>Introduction to HTTP and
+                Servlets (only 1 lecture)</topics>
+            <lab>Simple Servlets</lab>
+        </week>
+        <week id="8" test="endterm" coursework="2">
+            <topics>Java Servlet Programming and
+                Web Application development cycle</topics>
+            <lab>Servlets</lab>
+        </week>
+        <week id="9" test="endterm" coursework="2">
+            <topics>Web Application Security and
+                Web Services (SOAP, UDDI, WSDL)</topics>
+            <otherDetails>Coursework 2 Handed out</otherDetails>
+            <lab>Web Services (SOAP, UDDI, WSDL)</lab>
+        </week>
+        <week id="10" test="endterm">
+            <topics>RESTful API Architecture and JSON Data Representation</topics>
+            <lab>JSON</lab>
+        </week>
+        <week id="11" test="endterm">
+            <topics>More Frontend (JavaScript, JQuery, AJAX etc.)
+                and Backend Web Development (Java, Python, PHP etc.), and Other
+                forms of Data Representation (RDF, *SON)</topics>
+            <otherDetails>Coursework 2 Due</otherDetails>
+            <lab>Catch up Lab Sessions</lab>
+        </week>
+        <week id="12">
+            <topics>EndTerm Test for CSF205</topics>
+        </week>
+    </lectureSyllabus>
+</schemeOfWork>

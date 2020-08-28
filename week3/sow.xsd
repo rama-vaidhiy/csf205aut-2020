@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.org/sow"
+        xmlns:tns="http://www.example.org/sow" elementFormDefault="qualified">
+    <complexType name="courseDetailsType">
+        <sequence>
+            <element name="courseTitle" type="string" maxOccurs="1"
+                     minOccurs="1"></element>
+            <element name="courseDuration" type="tns:courseDurationType"
+                     maxOccurs="1" minOccurs="1"></element>
+            <element name="courseInstructor" type="tns:instructorType"
+                     maxOccurs="unbounded" minOccurs="1"></element>
+            <element name="courseDates" type="tns:courseDateType"
+                     maxOccurs="1" minOccurs="1"></element>
+        </sequence>
+    </complexType>
+    <complexType name="courseDurationType">
+        <simpleContent>
+            <extension base="unsignedByte">
+                <attribute name="length" type="string" use="required"></attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="courseDateType">
+        <sequence>
+            <element name="startDate" type="string"></element>
+            <element name="endDate" type="string"></element>
+        </sequence>
+    </complexType>
+    <complexType name="instructorType">
+        <sequence>
+            <element name="instructor" type="tns:eachInstructorType" maxOccurs="unbounded" minOccurs="1"></element>
+        </sequence>
+    </complexType>
+    <complexType name="eachInstructorType">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="emailID" type="string" use="required"></attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="booksRecommendedType">
+        <sequence>
+            <element name="book" type="tns:booksType" maxOccurs="unbounded" minOccurs="1"></element>
+        </sequence>
+    </complexType>
+    <complexType name="booksType">
+        <sequence>
+            <element name="title" type="string" />
+            <element name="authors">
+                <complexType>
+                    <sequence>
+                        <element maxOccurs="unbounded" name="author"
+                                 type="string" />
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+        <attribute name="isbn10" type="unsignedInt" use="required"></attribute>
+    </complexType>
+    <complexType name="lectureSyllabusType">
+        <sequence>
+            <element maxOccurs="unbounded" name="week" minOccurs="1">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="topics" type="string"/>
+                        <element minOccurs="0" maxOccurs="1" name="otherDetails" type="string" />
+                        <element minOccurs="0" maxOccurs="1" name="lab" type="string" />
+                    </sequence>
+                    <attribute name="id" type="int" use="required" />
+                    <attribute name="test" type="string" use="optional" />
+                    <attribute name="coursework" type="string" use="optional" />
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+    <element name="schemeOfWork" type="tns:sowType"></element>
+    <complexType name="sowType">
+        <sequence>
+            <element name="courseDetails"
+                     type="tns:courseDetailsType"></element>
+            <element name="booksRecommended"
+                     type="tns:booksRecommendedType"></element>
+            <element name="lectureSyllabus"
+                     type="tns:lectureSyllabusType"></element>
+        </sequence>
+        <attribute name="courseID" type="string" use="required"></attribute>
+    </complexType>
+</schema>

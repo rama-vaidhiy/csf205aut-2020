@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sow:schemeOfWork courseID="CSF205"
+                  xmlns:sow="http://www.example.org/sow"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.example.org/sow sow.xsd ">
+    <sow:courseDetails>
+        <sow:courseTitle>Data Representation, Markup Languages and Web Services</sow:courseTitle>
+        <sow:courseDuration length="months">3</sow:courseDuration>
+        <sow:courseInstructor>
+            <sow:instructor emailID="r.vaidhiyanathan@swansea.ac.uk">Ramalakshmi Vaidhiyanathan</sow:instructor>
+        </sow:courseInstructor>
+        <sow:courseDates>
+            <sow:startDate>23-Sept-2020</sow:startDate>
+            <sow:endDate>16-Dec-2020</sow:endDate>
+        </sow:courseDates>
+    </sow:courseDetails>
+    <sow:booksRecommended>
+        <sow:book isbn10="0321269667">
+            <sow:title>An Introduction to XML and Web Technologies</sow:title>
+            <sow:authors>
+                <sow:author>Anders Møller</sow:author>
+                <sow:author>Michael I. Schwartzbach</sow:author>
+            </sow:authors>
+        </sow:book>
+        <sow:book isbn10="0470114878">
+            <sow:title>Beginning XML</sow:title>
+            <sow:authors>
+                <sow:author>David Hunter</sow:author>
+            </sow:authors>
+        </sow:book>
+    </sow:booksRecommended>
+    <sow:lectureSyllabus>
+        <sow:week id="1" test="midterm" coursework="1">
+            <sow:topics>Introduction to Data Representation,
+                Data Presentation, Markup Languages, HTML</sow:topics>
+            <sow:lab>HTML</sow:lab>
+        </sow:week>
+        <sow:week id="2" test="midterm" coursework="1">
+            <sow:topics>Presentation and Styling of Data using CSS,
+                and Web Accessibility</sow:topics>
+            <sow:lab>HTML + CSS</sow:lab>
+        </sow:week>
+        <sow:week id="3" test="midterm" coursework="1">
+            <sow:topics>Introduction to Data Representation using XML,
+                XML validation using DTD and Schema</sow:topics>
+            <sow:otherDetails>Coursework 1 Handed out</sow:otherDetails>
+            <sow:lab>XML</sow:lab>
+        </sow:week>
+        <sow:week id="4" test="midterm">
+            <sow:topics>XPath, XSLT, XML to HTML using XSLT</sow:topics>
+            <sow:lab>XSLT</sow:lab>
+        </sow:week>
+        <sow:week id="5" test="midterm">
+            <sow:topics>Java XML Programming, SAX, DOM and StaX Parsers</sow:topics>
+            <sow:otherDetails>Coursework 1 Due</sow:otherDetails>
+            <sow:lab>Java XML Parsers</sow:lab>
+        </sow:week>
+        <sow:week id="6" test="endterm" coursework="2">
+            <sow:topics>Java XML Programming (Only 1 lecture)</sow:topics>
+            <sow:otherDetails>Mid Term Test for CSF205</sow:otherDetails>
+            <sow:lab>Java XML Parsers</sow:lab>
+        </sow:week>
+        <sow:week id="7" test="endterm" coursework="2">
+            <sow:topics>Introduction to HTTP and
+                Servlets (only 1 lecture)</sow:topics>
+            <sow:lab>Simple Servlets</sow:lab>
+        </sow:week>
+        <sow:week id="8" test="endterm" coursework="2">
+            <sow:topics>Java Servlet Programming and
+                Web Application development cycle</sow:topics>
+            <sow:lab>Servlets</sow:lab>
+        </sow:week>
+        <sow:week id="9" test="endterm" coursework="2">
+            <sow:topics>Web Application Security and
+                Web Services (SOAP, UDDI, WSDL)</sow:topics>
+            <sow:otherDetails>Coursework 2 Handed out</sow:otherDetails>
+            <sow:lab>Web Services (SOAP, UDDI, WSDL)</sow:lab>
+        </sow:week>
+        <sow:week id="10" test="endterm">
+            <sow:topics>RESTful API Architecture and JSON Data Representation</sow:topics>
+            <sow:lab>JSON</sow:lab>
+        </sow:week>
+        <sow:week id="11" test="endterm">
+            <sow:topics>More Frontend (JavaScript, JQuery, AJAX etc.)
+                and Backend Web Development (Java, Python, PHP etc.), and Other
+                forms of Data Representation (RDF, *SON)</sow:topics>
+            <sow:otherDetails>Coursework 2 Due</sow:otherDetails>
+            <sow:lab>Catch up Lab Sessions</sow:lab>
+        </sow:week>
+        <sow:week id="12">
+            <sow:topics>EndTerm Test for CSF205</sow:topics>
+        </sow:week>
+    </sow:lectureSyllabus>
+</sow:schemeOfWork>

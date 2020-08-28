@@ -1,0 +1,33 @@
+<!DOCTYPE schemeOfWork [
+        <!ELEMENT schemeOfWork (courseDetails|booksRecommended|lectureSyllabus)*>
+        <!ATTLIST schemeOfWork
+                courseID CDATA #REQUIRED>
+        <!ELEMENT courseDetails (courseTitle|courseDuration|courseInstructor|courseDates)*>
+        <!ELEMENT courseTitle (#PCDATA)>
+        <!ELEMENT courseDuration (#PCDATA)>
+        <!ATTLIST courseDuration
+                length CDATA #REQUIRED>
+        <!ELEMENT courseInstructor (instructor)*>
+        <!ELEMENT instructor (#PCDATA)>
+        <!ATTLIST instructor
+                emailID CDATA #REQUIRED>
+        <!ELEMENT courseDates (startDate|endDate)*>
+        <!ELEMENT startDate (#PCDATA)>
+        <!ELEMENT endDate (#PCDATA)>
+        <!ELEMENT booksRecommended (book)*>
+        <!ELEMENT book (title|authors)*>
+        <!ATTLIST book
+                isbn10 CDATA #REQUIRED>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT authors (author)*>
+        <!ELEMENT author (#PCDATA)>
+        <!ELEMENT lectureSyllabus (week)*>
+        <!ELEMENT week (topics|lab|otherDetails)*>
+        <!ATTLIST week
+                coursework CDATA #IMPLIED
+                id CDATA #REQUIRED
+                test CDATA #IMPLIED>
+        <!ELEMENT topics (#PCDATA)>
+        <!ELEMENT lab (#PCDATA)>
+        <!ELEMENT otherDetails (#PCDATA)>
+        ]>
