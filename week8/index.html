@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Form With Servlets</title>
+</head>
+<body>
+	<p> As part of this file, we will see examples of using a rather simple
+		servlet in a HTML form. There are two ways of defining a servlet.
+		<ul>
+			<li>Using the web.xml</li>
+			<li>Using Annotations in the Servlet Class</li>
+		</ul>
+	<hr/>
+	<h1>Form using GET method (non-Annotated)</h1>
+
+	<form method="GET" action="/Lab7/HelloWorld">
+		<label for="user">Username:</label><br> <input type="text"
+			id="user" name="user"><br> <label for="pass">Password:</label><br>
+		<input type="password" id="pass" name="pass">
+		<button name="getIt" type="submit">Call Get</button>
+	</form>
+
+	<h1>Form using POST method (non-Annotated)</h1>
+
+	<form method="POST" action="/Lab7/HelloWorld">
+		<label for="user">Username:</label><br> <input type="text"
+			id="user" name="user"><br> <label for="pass">Password:</label><br>
+		<input type="password" id="pass" name="pass">
+		<button name="postIt" type="submit">Call Post</button>
+	</form>
+
+	<hr/>
+	<h1>Form using GET method (Annotated)</h1>
+
+	<form method="GET" action="/Lab7/AnnotatedServlet">
+		<label for="user">Username:</label><br> <input type="text"
+			id="user" name="user"><br> <label for="pass">Password:</label><br>
+		<input type="password" id="pass" name="pass">
+		<button name="getIt" type="submit">Call Get</button>
+	</form>
+
+	<h1>Form using POST method (Annotated)</h1>
+
+	<form method="POST" action="/Lab7/AnnotatedServlet">
+		<label for="user">Username:</label><br> <input type="text"
+			id="user" name="user"><br> <label for="pass">Password:</label><br>
+		<input type="password" id="pass" name="pass">
+		<button name="postIt" type="submit">Call Post</button>
+	</form>
+
+</body>
+</html>

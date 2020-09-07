@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+   version="4.0">
+  <display-name>Week8 Demo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+    <!-- Define the servlet -->
+
+    <servlet>
+      <servlet-name>HelloWorld</servlet-name>
+      <servlet-class>HelloWorldServlet</servlet-class>
+    </servlet>
+
+    <!--Map the servlet to a URL -->
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+     	<servlet-name>SimpleServlet2</servlet-name>
+     	<servlet-class>week8.SimpleServlet2</servlet-class>
+     	<init-param>
+     		<param-name>newCtxName</param-name>
+     		<param-value>SowWk8</param-value>
+     	</init-param>
+     </servlet>
+
+
+     <servlet>
+     	<servlet-name>XMLReader</servlet-name>
+     	<servlet-class>week8.XMLReaderServlet</servlet-class>
+     </servlet>
+     <!--  Now map the servlet name to a URI -->
+
+
+        <servlet-mapping>
+          <servlet-name>SimpleServlet2</servlet-name>
+          <url-pattern>/SimpleServlet2</url-pattern>
+        </servlet-mapping>
+
+
+     <servlet-mapping>
+     <servlet-name>XMLReader</servlet-name>
+     <url-pattern>/SoWXMLReader</url-pattern>
+   </servlet-mapping>
+
+
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+
+</web-app>
