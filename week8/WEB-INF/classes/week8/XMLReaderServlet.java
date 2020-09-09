@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.jdom2.JDOMException;
@@ -43,6 +44,7 @@ public class XMLReaderServlet extends HttpServlet {
 	 */
 	private void returnXMLFile(HttpServletResponse resp) throws IOException
 	{
+		 
 		String myfile =
 				  getServletContext().getRealPath("/week3/CSF205SoWNoSchema.xml");
 		System.out.println("**** "+new File(myfile).getAbsolutePath());
@@ -74,6 +76,11 @@ public class XMLReaderServlet extends HttpServlet {
 			if (null != params && !(params.isEmpty())) {
 				for (Map.Entry<String, String[]> p : params.entrySet())
 					System.out.println("Parameter Key: " + p.getKey() + ", Parameter Value: " + p.getValue());
+			}
+			HttpSession session = req.getSession();
+			if(null!=session)
+			{
+				System.out.println("The Session ID is set to  "+session.getAttribute("ID"));
 			}
 		}
 	}
