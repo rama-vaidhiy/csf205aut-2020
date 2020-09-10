@@ -1,0 +1,10 @@
+curl --location --request POST 'http://localhost:9999/ts' \
+--header 'SOAPAction: ""' \
+--header 'Content-type: text/xml' \
+--data-raw '<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://week9/">
+    <soap:Body>
+        <tns:getTimeAsString xmlns:nil="true">
+    </tns:getTimeAsString>
+    </soap:Body>
+</soap:Envelope>'

@@ -1,0 +1,19 @@
+POST /ts HTTP/1.1
+Host: localhost:9999
+SOAPAction: ""
+User-Agent: PostmanRuntime/7.19.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: c7d5407f-cc0f-428b-b59c-af22e461cd26
+Host: localhost:9999
+Accept-Encoding: gzip, deflate
+Content-Length: 251
+Connection: keep-alive
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://week9/">
+    <soap:Body>
+        <tns:getTimeAsString xmlns:nil="true">
+    </tns:getTimeAsString>
+    </soap:Body>
+</soap:Envelope>
