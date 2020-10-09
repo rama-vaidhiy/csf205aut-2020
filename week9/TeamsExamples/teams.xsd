@@ -1,0 +1,39 @@
+<xs:schema
+    xmlns:tns="http://week9/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://week9/">
+    <xs:element name="getTeam" type="tns:getTeam"/>
+    <xs:element name="getTeamResponse" type="tns:getTeamResponse"/>
+    <xs:element name="getTeams" type="tns:getTeams"/>
+    <xs:element name="getTeamsResponse" type="tns:getTeamsResponse"/>
+    <xs:complexType name="getTeams">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="getTeamsResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:team" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="team">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="players" type="tns:player" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="rosterCount" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="player">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="nickname" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getTeam">
+        <xs:sequence>
+            <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getTeamResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:team" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

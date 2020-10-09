@@ -1,0 +1,63 @@
+<definitions
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:wsp="http://www.w3.org/ns/ws-policy"
+    xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="http://week9/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://week9/" name="TeamsService">
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://week9/" schemaLocation="http://localhost:8888/teams?xsd=1"/>
+        </xsd:schema>
+    </types>
+    <message name="getTeams">
+        <part name="parameters" element="tns:getTeams"/>
+    </message>
+    <message name="getTeamsResponse">
+        <part name="parameters" element="tns:getTeamsResponse"/>
+    </message>
+    <message name="getTeam">
+        <part name="parameters" element="tns:getTeam"/>
+    </message>
+    <message name="getTeamResponse">
+        <part name="parameters" element="tns:getTeamResponse"/>
+    </message>
+    <portType name="Teams">
+        <operation name="getTeams">
+            <input wsam:Action="http://week9/Teams/getTeamsRequest" message="tns:getTeams"/>
+            <output wsam:Action="http://week9/Teams/getTeamsResponse" message="tns:getTeamsResponse"/>
+        </operation>
+        <operation name="getTeam">
+            <input wsam:Action="http://week9/Teams/getTeamRequest" message="tns:getTeam"/>
+            <output wsam:Action="http://week9/Teams/getTeamResponse" message="tns:getTeamResponse"/>
+        </operation>
+    </portType>
+    <binding name="TeamsPortBinding" type="tns:Teams">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <operation name="getTeams">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getTeam">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="TeamsService">
+        <port name="TeamsPort" binding="tns:TeamsPortBinding">
+            <soap:address location="http://localhost:8888/teams"/>
+        </port>
+    </service>
+</definitions>
