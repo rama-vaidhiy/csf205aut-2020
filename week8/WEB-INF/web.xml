@@ -62,5 +62,42 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+    <!-- The following section will work only in conjunction with the configuration in tomcat-users.xml-->
+    <!-- The following entries should be in the tomcat-users.xml
+    
+<role rolename="teacher"/>
+<role rolename="student"/>
+<role rolename="administrator"/>
+<user username="asha" password="shsa" roles="teacher,student,administrator"/>
+<user username="david" password="divad" roles="student"/>
+    
+    
+
+    
+    -->
+
+    <!-- define the constraints for the web pages-->
+    <security-constraint>
+      <web-resource-collection>
+        <web-resource-name>ApplicationContent</web-resource-name>
+        <url-pattern>/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+         <role-name>teacher</role-name>
+      </auth-constraint>
+    </security-constraint>
+    <!--define the relevant roles that will have access to the app-->
+     <security-role>
+      <description>
+        The role that is required to access the application
+      </description>
+      <role-name>teacher</role-name>
+    </security-role>
+    <!--define the login configuration, BASIC/FORM -->
+     <login-config>
+      <auth-method>BASIC</auth-method>
+      <realm-name>SecuredApp</realm-name>
+    </login-config>
+
 
 </web-app>
